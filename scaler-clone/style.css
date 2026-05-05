@@ -1,0 +1,260 @@
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --brand: #e94560;
+  --text: #eee;
+  --muted: #888;
+  --radius: 12px;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  background-color: var(--surface);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .title {
+  background: linear-gradient(to right, #e83a5f, #e94560);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: var(--brand);
+}
+
+.navbar button {
+  background-color: var(--brand);
+  color: var(--text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navbar button:hover {
+  background-color: #e83a5f;
+}
+
+.hero {
+  background-color: var(--surface);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .badge {
+  background-color: var(--brand);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.hero .cta {
+  background-color: var(--brand);
+  color: var(--text);
+  border: none;
+  padding: 15px 30px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 10px;
+}
+
+.hero .cta:hover {
+  background-color: #e83a5f;
+}
+
+.programs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 50px;
+}
+
+.programs .card {
+  background-color: var(--surface);
+  padding: 20px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.programs .card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.programs .card p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: var(--surface);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer .column h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer .column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .column li {
+  margin-bottom: 10px;
+}
+
+.footer .column a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer .column a:hover {
+  color: var(--brand);
+}
+
+.copyright {
+  background-color: var(--bg);
+  color: var(--muted);
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .programs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .copyright {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 5px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar .title {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .programs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .copyright {
+    padding: 5px;
+  }
+}
